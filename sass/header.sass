@@ -1,0 +1,51 @@
+/*==================	Header ==================*/
+.header
+	padding: 10px 0
+	display: none
+	&-nav
+		display: flex
+		height: 100%
+		align-items: center
+		justify-content: center
+	&-menu
+		font-family: Bon_Vivant, sans-serif
+		font-weight: bold
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			margin: 0 8px
+			a
+				font-size: 23px
+				color: #000
+				letter-spacing: 0.02em
+				text-transform: uppercase
+				position: relative
+				padding: 0 3px
+				&::before
+					position: absolute
+					bottom: 0
+					content: ''
+					left: 50%
+					width: 0%
+					height: 1px
+					background-color: #000
+					transition: all .3s linear
+				&:hover
+					text-decoration: none
+					&::before
+						width: 100%
+						left: 0
+	&-social
+		display: flex
+		justify-content: flex-end
+		height: 100%
+		align-items: center
+		&__link:last-child
+			margin-left: 20px
+	&__button
+		display: none
+.mobile
+	display: none
+
+	

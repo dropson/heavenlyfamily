@@ -1,0 +1,260 @@
+@import "vars"
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+  /*==================	Preview ==================*/  
+  .preview
+    margin-top: 10px
+    &-item
+      &__title
+        font-size: 100px
+        line-height: 100px
+        margin-bottom: -50px
+  /*==================	About ==================*/         
+  .about-item
+    &__title
+      font-size: 65px
+    &__description
+      font-size: 30px
+  /*==================	Collection ==================*/       
+  .collection
+    padding: 120px 0 90px 0
+    &-image
+      &__back
+        width: 95%
+      &__front
+        width: 65%
+    &-left
+      &__title
+        transform: translate(-80px, 0)
+    &-right
+      &__back
+        margin-left: auto
+      &__title
+        transform: translate(40px, 0)
+  /*==================	Bestsellers ==================*/        
+  .bestsellers-item
+    min-width: auto
+    width: 320px
+    &__title
+      font-size: 43px
+  .instagram
+    padding: 100px 0
+    &-info__text
+      font-size: 65px
+  .footer-item__list li
+    font-size: 26px
+    letter-spacing: 0
+// ≥992px
++media-breakpoint-down(md)
+  /*==================	Header ==================*/   
+  .header
+    &-social
+      display: none
+    &-menu
+      li
+        a
+          font-size: 21px
+  .about
+    padding: 120px 0 70px
+
+  .collection
+    padding: 90px 0 60px 0
+    &-info
+      margin-top: 300px
+      width: 100%
+      &__button
+        width: 130px
+        height: 130px
+      &__title
+        transform: translate(0,0)
+        margin: 20px 0 20px 0
+    &-left
+      &__description
+        padding-left: 0
+    &-right__front
+      img
+        margin-left: auto
+  .bestsellers
+    margin-top: 100px
+  .instagram-info__social
+    flex: 0 0 200px
+  .instagram-info__text
+    font-size: 50px
+  .footer-item
+    margin-bottom: 40px
+    &__title
+      position: relative
+      display: flex
+      align-items: center
+      span
+        width: 100%
+        height: 1px
+        margin-left: 12px
+        background-color: #fff
+// ≥768px
++media-breakpoint-down(sm)
+  /*==================Header ==================*/   
+  .header
+    &-nav
+      display: none
+  .header__button
+    display: flex
+    height: 100%
+    align-items: center
+    justify-content: flex-end
+  .about-item__title, .about-item__description
+    text-align: center
+  .about-item__signature
+    display: block  
+    text-align: center
+  .about-item__description
+    margin: 45px 0
+  .instagram-info__social
+    flex: 0 0 auto
+  .instagram-info__text
+    font-size: 43px
+  /*==================	Mobile menu ==================*/ 
+  .button-menu
+    display: flex
+    border: 0
+    align-items: center
+    width: 35px
+    height: 32px
+    background-color: transparent
+    overflow: hidden
+    border-radius: 7px
+    cursor: pointer
+    position: relative
+    z-index: 3
+    transition: all .3s linear
+    outline: 0
+    &:focus
+      outline: 0
+    .bar
+      display: block
+      position: absolute
+      width: 23px
+      height: 2px
+      background-color: #000
+      transition: all .2s ease-in-out
+    &:after,
+    &:before 
+      display: block
+      position: absolute
+      width: 23px
+      height: 2px
+      background-color: #000
+      transition: all .2s ease-in-out
+      top: 10px
+      left: 0
+    &:before 
+      position: absolute
+      content: ''
+      top: 6px
+      left: 0
+    &:after
+      position: absolute
+      content: ''
+      top: -6px
+      left: 0
+  .mobile
+    position: fixed
+    width: 100%
+    align-items: unset
+    padding: 100px 15px
+    height: 100%
+    background-color: #fff
+    top: 0
+    left: -200%
+    z-index: 12
+    flex-direction: column
+    max-height: 100vh
+    overflow: hidden
+    display: block
+    transition: all .8s cubic-bezier(.73, .29, 0, 1)
+    pointer-events: none
+
+    ul
+      list-style-type: none
+      margin: 0 0 20px
+      font-size: 24px
+      padding: 0 0 10px
+      li
+        margin-bottom: 7px
+
+        a
+          color: #000
+
+    &__bold
+      font-weight: 800
+
+  .js-open
+    overflow: hidden
+    .button-menu
+      z-index: 15
+      transition: all .3s linear
+    .header-link
+      z-index: 12
+    .bar
+      background-color: transparent
+      &:before
+        top: 0
+        transform: rotate(45deg)
+      &:after
+        top: 0
+        background-color: #000
+        transform: rotate(-45deg)
+
+    .mobile
+      left: 0
+      pointer-events: auto
+      transition: all .8s cubic-bezier(.73, .29, 0, 1)
+
+// ≥576px
++media-breakpoint-down(xs)
+
+  .content-section .figure
+    width: 88%
+  .preview-item__title
+    margin-bottom: -30px
+  .preview-item__title
+    font-size: 54px
+    line-height: 54px
+  .about-item__signature
+    svg
+      width: 100%
+  .about-item__title
+    font-size: 43px
+  .collection-image__front
+    width: 60%  
+  .about-item__description
+    font-size: 22px
+  .collection-image__front
+    bottom: -180px  
+  .collection-info
+    position: relative
+    z-index: 3
+    margin-top: 120px  
+  .collection-right__title
+    text-align: right
+  .collection-info__description
+    font-size: 18px          
+  .collection-info__title
+    font-size: 47px
+  .instagram-info__text
+     font-size: 28px 
+  .bestsellers-inner__text
+    font-size: 45px   
+  .instagram-info__social
+    img
+      width: 43px   
+  .bestsellers-items
+    padding: 0 0 0 15px    
+  .bestsellers-inner
+    padding: 60px 0 30px 0  
+  .instagram-portfolio
+    margin-top: 30px  
+  .footer
+    padding: 100px 0 0  

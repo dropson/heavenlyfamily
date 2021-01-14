@@ -1,0 +1,24 @@
+
+
+// FONTS LOAD SECTION
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false )
+	@font-face
+		font-family: $font-family
+		font-weight: $weight
+		font-style: $style
+
+		@if $asset-pipeline == true
+			src: font-url('#{$file-path}.eot')
+			src: font-url('#{$file-path}.eot?#iefix') format('embedded-opentype'), font-url('#{$file-path}.woff') format('woff'), font-url('#{$file-path}.ttf') format('truetype')
+		@else
+			src: url('#{$file-path}.eot')
+			src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype')
+
+@include font-face("Bon_Vivant", "../fonts/BonVivant/BonVivantSerif", 400)
+@include font-face("Bon_Vivant", "../fonts/BonVivant/BonVivantSerifBold", bold)
+
+@include font-face("Neue_World", "../fonts/NeueWorld/NeueWorldLight", 300)
+@include font-face("Neue_World", "../fonts/NeueWorld/NeueWorldRegular", 400)
+
+@include font-face("Neometric", "../fonts/NeoMetric/Neometric-Light", 300)
+@include font-face("Neometric", "../fonts/NeoMetric/Neometric-Regular", 400)
